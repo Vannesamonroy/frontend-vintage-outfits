@@ -36,7 +36,7 @@
 
     .price{
       font-size: 30px;
-      color: #2879fe;
+      color: #A0C9D9;
       font-weight: 500;
     }
 
@@ -65,7 +65,7 @@
     .add{
       width: 250px;
       padding: 10px;
-      background-color: #2879fe;
+      background-color: #A0C9D9;
       color: white;
       display: flex;
       align-items: center;
@@ -84,7 +84,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #2879fe;
+        color: #A0C9D9;
         font-size: 14px;
       }
     }
@@ -107,5 +107,9 @@
       border: 1px solid rgb(238, 237, 237);
     }
 
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 }

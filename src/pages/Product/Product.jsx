@@ -82,26 +82,26 @@ const Product = () => {
                 )
               }
             >
-              <AddShoppingCartIcon /> ADD TO CART
+              <AddShoppingCartIcon /> AGREGAR AL CARRITO
             </button>
             <div className="links">
               <div className="item">
-                <FavoriteBorderIcon /> ADD TO WISH LIST
+                <FavoriteBorderIcon style={{color: "#A0C9D9"}}/> AGREGAR A FAVORITOS
               </div>
               <div className="item">
-                <BalanceIcon /> ADD TO COMPARE
+                <BalanceIcon style={{color: "#A0C9D9"}}/> LOS MEJORES PRECIOS
               </div>
             </div>
             <div className="info">
-              <span>Vendor: Polo</span>
+              <span>Vendedor: Polo</span>
               <span>Product Type: T-Shirt</span>
               <span>Tag: T-Shirt, Women, Top</span>
             </div>
             <hr />
             <div className="info">
-              <span>DESCRIPTION</span>
+              <span>DESCRIPCION:</span>
               <hr />
-              <span>ADDITIONAL INFORMATION</span>
+              <span>INFORMACION ADICIONAL</span>
               <hr />
               <span>FAQ</span>
             </div>

@@ -1,6 +1,6 @@
 .navbar {
   height: auto;
-  z-index: 1000;
+  // z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,16 +35,17 @@
       color: #777;
       .cartIcon {
         position: relative;
+        cursor: pointer;
         span {
-          font-size: 12px;
-          width: 20px;
-          height: 20px;
+          font-size:8px;
+          width: 12px;
+          height: 12px;
           border-radius: 50%;
-          background-color: #2879fe;
+          background-color: #A0C9D9;
           color: white;
           position: absolute;
-          right: -10px;
-          top: -10px;
+          right: -1px;
+          top: 0px;
           display: flex;
           align-items: center;
           justify-content: center;

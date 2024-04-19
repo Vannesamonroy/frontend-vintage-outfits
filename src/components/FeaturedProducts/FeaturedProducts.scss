@@ -31,6 +31,7 @@
     // }
   }
   @media (max-width: 768px) {
+    margin: 100px auto;
     .top {
       flex-direction: column; // Cambia la disposición de los elementos a vertical
       align-items: flex-start; // Alinea los elementos al inicio del contenedor para mantener la coherencia
