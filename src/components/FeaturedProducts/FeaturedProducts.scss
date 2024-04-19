@@ -1,0 +1,47 @@
+.featuredProducts {
+  margin: 100px 200px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h1 {
+      flex: 2;
+      text-transform: capitalize;
+    }
+
+    p{
+      flex:3;
+      color:gray
+    }
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    
+    gap: 50px;
+    // .Card {
+    //   flex: 1 1 1 calc(15% - 50px); // Asume un gap de 50px, ajusta según tu diseño
+    //   max-width: calc(15% - 50px); // Asegura que el ancho máximo sea el correcto
+    // }
+  }
+  @media (max-width: 768px) {
+    .top {
+      flex-direction: column; // Cambia la disposición de los elementos a vertical
+      align-items: flex-start; // Alinea los elementos al inicio del contenedor para mantener la coherencia
+      h1 {
+        margin: 1rem auto;
+
+      }
+      p{
+        margin: auto;
+        text-align: justify;
+      }
+    }
+  }
+}

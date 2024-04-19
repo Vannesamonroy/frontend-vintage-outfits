@@ -1,0 +1,94 @@
+.navbar {
+  height: auto;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 1.875rem;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .menu-open{
+      display: none;
+    }
+    .menu-closed{
+      display: none;
+    }
+    .menuIcon {
+      display: none; // Oculto por defecto
+      cursor: pointer;
+    }
+    .item, .left, .center, .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .center {
+      font-size: 2rem;
+      margin: auto;
+    }
+    .icons {
+      display: flex;
+      gap: 15px;
+      color: #777;
+      .cartIcon {
+        position: relative;
+        span {
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #2879fe;
+          color: white;
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 80px;
+    .wrapper .menuIcon {
+      display: none; // Asegura que el ícono de menú esté oculto en pantallas grandes
+    }
+    // Estilos adicionales para pantallas grandes si son necesarios
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .wrapper {
+    flex-direction: column;
+    .menuIcon {
+      display: flex; // Muestra el ícono de menú solo en pantallas pequeñas
+      align-items: center;
+      justify-content: center;
+    }
+    .left, .right , .menu-closed  { // Oculta estos elementos en pantallas pequeñas
+      display: none;
+    }
+    .left-menu, .right-menu , .menu-open  { // Oculta estos elementos en pantallas pequeñas
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .center { // Asegura que el centro esté visible y correctamente alineado
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    
+  }
+}
+

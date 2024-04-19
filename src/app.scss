@@ -1,0 +1,17 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  // box-sizing: border-box;
+}
+
+.app{
+  // border: 1px solid red;
+  .link{
+    color: inherit;
+    text-decoration: none;
+  }
+}
