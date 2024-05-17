@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Products from "./pages/Products/Products";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 import "./app.scss"
+const avatar = "https://res.cloudinary.com/dchppqmwt/image/upload/v1715403320/avatar_ippqvo.png";
 
 const Layout = () => {
   return (
@@ -13,6 +15,18 @@ const Layout = () => {
       <Navbar />
       <Outlet />
       <Footer />
+      <FloatingWhatsApp
+      phoneNumber="573112793529"
+      accountName="Vintage Outfits"
+      allowEsc
+      allowClickAway
+      notification
+      notificationSound
+      chatMessage="Hola, ¿cómo podemos ayudarte?"
+      statusMessage="En Linea"
+      avatar={avatar}
+      
+    />
     </div>
   );
 };

@@ -67,17 +67,17 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div> */}
           <div className="item">
-            <Link className="link" to="/products/1">
+            <Link className="link" to="/products/2">
               Mujeres
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/2">
+            <Link className="link" to="/products/3">
               Hombres
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/3">
+            <Link className="link" to="/products/4">
               Calcetines
             </Link>
           </div>
@@ -109,9 +109,10 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="icons">
-            <SearchIcon />
+            {/*<SearchIcon />
             <PersonOutlineOutlinedIcon />
             <FavoriteBorderOutlinedIcon />
+            */}
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
@@ -136,21 +137,21 @@ const Navbar = () => {
           <div className="item-menu" onClick={() => {
             console.log("click menuIcon");
             setIsMenuOpen(!isMenuOpen)}}>
-            <Link className="link" to="/products/1">
+            <Link className="link" to="/products/2">
               Mujeres
             </Link>
           </div>
           <div className="item-menu" onClick={() => {
             console.log("click menuIcon");
             setIsMenuOpen(!isMenuOpen)}}>
-            <Link className="link" to="/products/2">
+            <Link className="link" to="/products/3">
               Hombres
             </Link>
           </div>
           <div className="item-menu" onClick={() => {
             console.log("click menuIcon");
             setIsMenuOpen(!isMenuOpen)}}>
-            <Link className="link" to="/products/3">
+            <Link className="link" to="/products/4">
               Calcetines
             </Link>
           </div>
@@ -179,9 +180,9 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="icons">
-            <SearchIcon />
+            {/*<SearchIcon />
             <PersonOutlineOutlinedIcon />
-            <FavoriteBorderOutlinedIcon />
+            <FavoriteBorderOutlinedIcon />*/}
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
