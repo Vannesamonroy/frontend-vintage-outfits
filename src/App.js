@@ -25,6 +25,7 @@ const Layout = () => {
       chatMessage="Hola, ¿cómo podemos ayudarte?"
       statusMessage="En Linea"
       avatar={avatar}
+      className="floating-whatsapp"
       
     />
     </div>
