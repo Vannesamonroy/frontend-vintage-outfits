@@ -4,8 +4,7 @@
 *::after {
   // margin: 0;
   // padding: 0;
-  overflow-x: visible;
-  overflow-y: visible; 
+  overflow-x: hidden;
   // box-sizing: border-box;
 }
 
@@ -21,8 +20,17 @@
     height: auto;
   }
   .styles-module_whatsappChatBox__MdQ5U {
-    height: 500px;
+    height: auto;
+    overflow-x: visible;
+    overflow-y: visible;
     
-  } 
+  }
+  .styles-module_chatFooter__TGv0P {
+     overflow: visible;
+  }
+   .styles-module_chatHeader__gaeOA {
+   overflow: visible;
+   height: auto;
+   }
 }
 
