@@ -103,11 +103,11 @@ const Navbar = () => {
               Contacto
             </Link>
           </div>
-          <div className="item">
+          {/* <div className="item">
             <Link className="link" to="/">
               Tienda
             </Link>
-          </div>
+          </div> */}
           <div className="icons">
             {/*<SearchIcon />
             <PersonOutlineOutlinedIcon />
@@ -174,11 +174,11 @@ const Navbar = () => {
               Contacto
             </Link>
           </div>
-          <div className="item">
+          {/* <div className="item">
             <Link className="link" to="/">
               Tienda
             </Link>
-          </div>
+          </div> */}
           <div className="icons">
             {/*<SearchIcon />
             <PersonOutlineOutlinedIcon />

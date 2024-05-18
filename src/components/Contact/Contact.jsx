@@ -38,9 +38,9 @@ const Contact = () => {
             <StyledInstagramIcon />
           </a>
 
-          <TwitterIcon />
+          {/* <TwitterIcon />
           <GoogleIcon />
-          <PinterestIcon />
+          <PinterestIcon /> */}
         </div>
       </div>
     </div>
