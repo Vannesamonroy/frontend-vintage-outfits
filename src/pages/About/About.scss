@@ -1,0 +1,39 @@
+$main-padding: 20px;
+$text-justify: justify;
+$image-width: 100%;
+$max-image-width: 600px;
+$margin-standard: 20px;
+$font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
+
+
+.container-about {
+    max-width: 800px;
+    margin: auto;
+    padding: $main-padding;
+    text-align: center; // Cambio para centrar el título y ajustar el texto
+    font-family: $font-family-vintage;
+    h1 {
+        margin-bottom: $margin-standard;
+    }
+
+    .image {
+        display: block;
+        margin: $margin-standard auto;
+        width: $image-width;
+        max-width: $max-image-width;
+    }
+
+    p {
+        text-align: $text-justify; // Justifica el texto de los párrafos
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        .image {
+            max-width: 100%; // Asegura que la imagen sea totalmente responsive
+        }
+    }
+}

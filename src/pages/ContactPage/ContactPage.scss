@@ -1,0 +1,63 @@
+$font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
+$color-primary: #A0C9D9; // Color marrón oscuro, ajusta según tu paleta
+$color-secondary: #ffff; // Color crema claro para fondos y áreas destacadas
+
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: $color-secondary;
+    color: $color-primary;
+    font-family: $font-family-vintage;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input, textarea {
+            padding: 10px;
+            border: 2px solid $color-primary;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+
+            &:focus {
+                border-color: darken($color-primary, 10%);
+                outline: none;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: $color-primary;
+            color: $color-secondary;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+            }
+        }
+    }
+
+    .contact-info {
+        margin-top: 20px;
+        p {
+            margin: 5px 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 10px;
+    }
+}

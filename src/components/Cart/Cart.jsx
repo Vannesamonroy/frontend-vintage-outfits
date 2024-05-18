@@ -6,7 +6,8 @@ import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { makeRequest } from "../../makeRequest";
 import { loadStripe } from "@stripe/stripe-js";
-
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
+initMercadoPago('YOUR_PUBLIC_KEY');
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
