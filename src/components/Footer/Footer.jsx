@@ -34,7 +34,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="item">
-          <h1>Contact</h1>
+          <h1>Contacto</h1>
           <span>
             ¿Tienes alguna pregunta o necesitas ayuda para encontrar la prenda
             perfecta? Estamos aquí para ayudarte. No dudes en contactarnos por
