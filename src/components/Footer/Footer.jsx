@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="item">
           <h1>Nosotros</h1>
-          <span>
+          <span className="span-description">
             Somos amantes apasionados de la moda vintage, dedicados a compartir
             prendas y accesorios únicos con historias especiales. Nuestra
             selección está cuidadosamente curada para ofrecer calidad, estilo y
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="item">
           <h1>Contacto</h1>
-          <span>
+          <span className="span-description"> 
             ¿Tienes alguna pregunta o necesitas ayuda para encontrar la prenda
             perfecta? Estamos aquí para ayudarte. No dudes en contactarnos por
             cualquier consulta o sugerencia que puedas tener. Puedes enviarnos

@@ -24,6 +24,10 @@
       display: flex;
       align-items: center;
       gap: 25px;
+      &:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al 110% */
+        opacity: 0.7; /* Reduce la opacidad al 70% */
+      }
     }
     .center {
       font-size: 2rem;

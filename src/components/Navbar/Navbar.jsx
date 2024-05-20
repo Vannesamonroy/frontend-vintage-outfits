@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -14,45 +14,34 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
+  const cartRef = useRef(null);
 
-//   return (
-//     <div className="navbar">
-//       <div className="wrapper">
-//         <div className="hamburger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-//           <MenuIcon />
-//         </div>
-//         <div className={isMenuOpen ? "menu-open" : "menu-closed"}>
-//           <div className="left">
-//             <Link className="link" to="/products/1">Mujeres</Link>
-//             <Link className="link" to="/products/2">Hombres</Link>
-//             <Link className="link" to="/products/3">Calcetines</Link>
-//           </div>
-//           <div className="center">
-//             <Link className="link" to="/">VINTAGE OUTFITS</Link>
-//           </div>
-//           <div className="right">
-//             <Link className="link" to="/">Inicio</Link>
-//             <Link className="link" to="/">Nosotros</Link>
-//             <Link className="link" to="/">Contacto</Link>
-//             <Link className="link" to="/">Tienda</Link>
-//             <div className="icons">
-//               <SearchIcon />
-//               <PersonOutlineOutlinedIcon />
-//               <FavoriteBorderOutlinedIcon />
-//               <div className="cartIcon" onClick={() => setOpen(!open)}>
-//                 <ShoppingCartOutlinedIcon />
-//                 <span>{products.length}</span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       {open && <Cart />}
-//     </div>
-//   );
-// };
+  const handleToggleCart = () => {
+    setOpen(!open);
+  };
 
-// export default Navbar;
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setOpen(false); // Cierra el carrito al cerrar el menú
+  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setOpen(false); // Cierra el carrito si se hace clic fuera del componente del carrito
+      }
+    };
+
+    const handleDocumentClick = (event) => {
+      handleClickOutside(event);
+    };
+
+    document.addEventListener("mousedown", handleDocumentClick);
+    return () => {
+      document.removeEventListener("mousedown", handleDocumentClick);
+    };
+  }, []);
+  
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -120,9 +109,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="menuIcon">
-          <MenuIcon onClick={() => {
-            console.log("click menuIcon");
-            setIsMenuOpen(!isMenuOpen)}} />
+          <MenuIcon onClick={handleToggleMenu} />
         </div>
         <div className={isMenuOpen ? "menu-open" : "menu-closed" }>
         <div className="left-menu">
@@ -183,7 +170,7 @@ const Navbar = () => {
             {/*<SearchIcon />
             <PersonOutlineOutlinedIcon />
             <FavoriteBorderOutlinedIcon />*/}
-            <div className="cartIcon" onClick={() => setOpen(!open)}>
+            <div className="cartIcon" onClick={handleToggleCart}>
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
             </div>
@@ -191,7 +178,7 @@ const Navbar = () => {
         </div>
         </div>
       </div>
-      {open && <Cart />}
+      {open && <Cart/>}
     </div>
   );
 };
