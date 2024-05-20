@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import "./Slider.scss";
@@ -18,6 +18,14 @@ const Slider = () => {
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Cambia la imagen cada 5 segundos (5000 milisegundos)
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
   return (
     <div className="slider">
