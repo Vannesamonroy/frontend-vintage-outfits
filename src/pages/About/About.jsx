@@ -18,6 +18,8 @@ function About() {
                 los estándares modernos de confort y sostenibilidad. Con Vintage Outfits, 
                 te vestimos con historia, estilo y conciencia.
             </p>
+
+            <p>Como diseñadora de <span>"NO + medias aburridas"</span>, nos esforzamos por crear diseños innovadores y emocionantes que desafíen las normas de la moda convencional. Nuestro enfoque es ofrecer medias que sean únicas, vibrantes y llenas de personalidad, para que puedas expresarte con estilo y originalidad en cada paso que des.</p>
             <img className='image' src="https://res.cloudinary.com/dchppqmwt/image/upload/v1707348866/IMG_20231009_WA_0046_s02ip8_725164dfde.jpg" alt="" />
         </div>
     );

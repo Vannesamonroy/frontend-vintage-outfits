@@ -31,6 +31,9 @@ $font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
         color:gray;
         margin:10px
       }
+    span {
+        font-weight: bold;
+    }
 }
 
 @media (max-width: 768px) {

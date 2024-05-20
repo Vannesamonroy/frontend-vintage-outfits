@@ -1,5 +1,5 @@
 $font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
-$color-primary: #A0C9D9; // Color marrón oscuro, ajusta según tu paleta
+$color-primary: black; // Color marrón oscuro, ajusta según tu paleta
 $color-secondary: #ffff; // Color crema claro para fondos y áreas destacadas
 
 .contact-container {
@@ -12,7 +12,9 @@ $color-secondary: #ffff; // Color crema claro para fondos y áreas destacadas
     text-align: center;
 
     h1 {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 390;
     }
 
     .contact-form {
