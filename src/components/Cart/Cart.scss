@@ -72,6 +72,20 @@
     font-weight: 500;
     margin-bottom: 20px;
   }
+  .Wallet {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #A0C9D9;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
 
   .reset{
     color:red;

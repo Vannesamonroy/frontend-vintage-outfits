@@ -1,11 +1,18 @@
 /* Reset CSS */
-*,
-*::before,
-*::after {
-  // margin: 0;
-  // padding: 0;
-  overflow-x: hidden;
-  // box-sizing: border-box;
+@media screen and (min-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    overflow-x: visible;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    overflow-x: hidden;
+  }
 }
 
 .app{
@@ -21,7 +28,7 @@
   }
   .styles-module_whatsappChatBox__MdQ5U {
     height: auto;
-    overflow-x: visible;
+    // overflow-x: visible;
     overflow-y: visible;
     
   }
