@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="left">
           <span className="logo">Vintage Outfits</span>
           <span className="copyright">
-            © Copyright 2023. All Rights Reserved
+            © Copyright 2024. Todos los derechos reservados.
           </span>
         </div>
         <div className="right">

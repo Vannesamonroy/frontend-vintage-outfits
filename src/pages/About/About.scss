@@ -12,8 +12,9 @@ $font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
     padding: $main-padding;
     text-align: center; // Cambio para centrar el título y ajustar el texto
     font-family: $font-family-vintage;
-    h1 {
-        margin-bottom: $margin-standard;
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 390;
     }
 
     .image {
@@ -23,10 +24,13 @@ $font-family-vintage: 'Open Sans', serif; // Ejemplo de fuente vintage
         max-width: $max-image-width;
     }
 
-    p {
-        text-align: $text-justify; // Justifica el texto de los párrafos
-        margin-bottom: 1em;
-    }
+    p{
+        font-size: 18px;
+        font-weight: 300;
+        text-align: justify;
+        color:gray;
+        margin:10px
+      }
 }
 
 @media (max-width: 768px) {

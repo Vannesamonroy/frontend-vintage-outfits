@@ -16,7 +16,7 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-
+  console.log(`datos  productos`, data);
   return (
     <div className="product">
       {loading ? (
@@ -98,7 +98,7 @@ const Product = () => {
             </div>
             <hr />
             <div className="info">
-              <span>DESCRIPCION:</span>
+              <span>DESCRIPCION: {data?.attributes?.desc}</span>
               <hr />
               <span>INFORMACION ADICIONAL</span>
               <hr />

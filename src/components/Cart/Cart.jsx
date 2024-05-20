@@ -1,6 +1,7 @@
 import React from "react";
 import "./Cart.scss";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
@@ -115,7 +116,12 @@ const Cart = () => {
     const id = await createPreference();
     if (id) {
       setPreferenceId(id);
+      // dispatch(resetCart());
     }
+  };
+  const handleMercadoPagoModalClose = () => {
+    // Aquí se restablece el carrito al cerrar el modal de Mercado Pago
+    dispatch(resetCart());
   };
   return (
     <div className="cart">
@@ -145,12 +151,13 @@ const Cart = () => {
       {preferenceId && (
             <Wallet
               initialization={{ preferenceId: preferenceId, redirectMode: 'modal' }}
+              onClose={handleMercadoPagoModalClose}
             />
           )}
       
       
       <span className="reset" onClick={() => dispatch(resetCart())}>
-        Borrar Carrito
+        <DeleteIcon/>
       </span>
     </div>
   );
