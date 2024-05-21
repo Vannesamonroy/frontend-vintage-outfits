@@ -20,6 +20,7 @@ export const cartSlice = createSlice({
       state.products=state.products.filter(item=>item.id !== action.payload)
     },
     resetCart: (state) => {
+      console.log("ESTADO", state);
       state.products = []
     },
   },

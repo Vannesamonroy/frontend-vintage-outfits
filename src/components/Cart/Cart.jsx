@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cart.scss";
+import FormShipping from "../FormShipping/FormShipping";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useSelector } from "react-redux";
@@ -11,70 +12,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from "axios";
 
-// const Cart = () => {
-//   const products = useSelector((state) => state.cart.products);
-//   console.log(products);
-//   const dispatch = useDispatch();
 
-//   const totalPrice = () => {
-//     let total = 0;
-//     products.forEach((item) => {
-//       total += item.quantity * item.price;
-//     });
-//     return total.toFixed(2);
-//   };
-
-//   const stripePromise = loadStripe(
-//     "pk_test_51Nj0KuKD8ojf0yJgj8LF8BRZ8yV48MwHvXPHA06ZfMtjMnSe36YZeFoiJhSp8l2uUI0k07AAlfogdUy31vdutsFW00umtcpWjG"
-//   );
-//   const handlePayment = async () => {
-//     try {
-//       const stripe = await stripePromise;
-//       console.log(products)
-//       const res = await makeRequest.post("/orders", {
-//         products,
-//       });
-//       await stripe.redirectToCheckout({
-//         sessionId: res.data.stripeSession.id,
-//       });
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-//   return (
-//     <div className="cart">
-//       <h1>Productos en el carrito</h1>
-//       {products?.map((item) => (
-//         <div className="item" key={item.id}>
-//           <img src={item.img} alt="" />
-//           <div className="details">
-//             <h1>{item.title}</h1>
-//             <p>{item.desc?.substring(0, 100)}</p>
-//             <div className="price">
-//               {item.quantity} x ${item.price}
-//             </div>
-//           </div>
-//           <DeleteOutlinedIcon
-//             className="delete"
-//             onClick={() => dispatch(removeItem(item.id))}
-//           />
-//         </div>
-//       ))}
-//       <div className="total">
-//         <span>SUBTOTAL</span>
-//         <span>${totalPrice()}</span>
-//       </div>
-//       <button onClick={handlePayment}>Ir a pagar</button>
-//       <span className="reset" onClick={() => dispatch(resetCart())}>
-//         Borrar Carrito
-//       </span>
-//     </div>
-//   );
-// };
 
 const Cart = () => {
-  
   const products = useSelector((state) => state.cart.products);
   console.log(products);
   const dispatch = useDispatch();
@@ -146,14 +86,17 @@ const Cart = () => {
         <span>SUBTOTAL</span>
         <span>${totalPrice()}</span>
       </div>
-      <button onClick={handleBuy}>Ir a pagar</button>
+      {/* <button onClick={handleBuy}>Ir a pagar</button> */}
       
-      {preferenceId && (
+      {/* {preferenceId && (
             <Wallet
               initialization={{ preferenceId: preferenceId, redirectMode: 'modal' }}
               onClose={handleMercadoPagoModalClose}
             />
-          )}
+          )} */
+          <FormShipping products={products}/>
+          }
+
       
       
       <span className="reset" onClick={() => dispatch(resetCart())}>
