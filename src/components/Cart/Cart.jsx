@@ -15,6 +15,9 @@ import axios from "axios";
 
 
 const Cart = () => {
+  const [open, setOpen] = useState(false);
+  const openHandler = () => setOpen(true);
+  const closeHandler = () => setOpen(false);
   const products = useSelector((state) => state.cart.products);
   console.log(products);
   const dispatch = useDispatch();

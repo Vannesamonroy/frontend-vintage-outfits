@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { resetCart } from "../../redux/cartReducer";
+import { resetCart, closeCart } from "../../redux/cartReducer";
 import { FormControl } from '@mui/base/FormControl';
 
 
@@ -21,7 +21,7 @@ const style = {
     width: 400,
     bgcolor: 'background.paper',
     // border: '2px solid #000',
-    boxShadow: 24,
+    // boxShadow: 24,
     p: 4,
     WebkitBoxShadow: '0px 0px 7px -5px rgba(0, 0, 0, 0.5)',
   boxShadow: 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset',
@@ -44,6 +44,7 @@ export default function FormShipping({products}) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
+        dispatch(closeCart());
         setFormData(initialFormData); // Restablece el formulario al estado inicial al cerrar el modal
     };
 
@@ -96,7 +97,7 @@ export default function FormShipping({products}) {
         setFormData({ ...formData, [name]: value });
     };
     const styles = {
-        padding: "5px",
+        padding: "10px",
     }
 
     const styleButon = {
@@ -124,7 +125,7 @@ export default function FormShipping({products}) {
 
                             </div>
                         ))}
-                        <TextField id="name" name="name" label="Nombre" value={formData.name} onChange={handleChange} fullWidth style={styles}/>
+                        <TextField id="name" name="name" label="Nombre" value={formData.name} onChange={handleChange} fullWidth style={{...styles, marginTop: "20px"}}/>
                         <TextField id="address" name="address" label="Dirección" value={formData.address} onChange={handleChange} fullWidth style={styles}/>
                         <TextField id="phone" name="phone" label="phone" value={formData.phone} onChange={handleChange} fullWidth style={styles}/>
                         <Button variant="contained" type='submit' style={styleButon}>Enviar</Button>

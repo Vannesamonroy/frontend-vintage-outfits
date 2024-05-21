@@ -23,10 +23,14 @@ export const cartSlice = createSlice({
       console.log("ESTADO", state);
       state.products = []
     },
+
+    closeCart: (state) => {
+      state.isOpen = false; // Agregar un campo isOpen en el estado inicial para controlar la visibilidad del carrito
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addToCart,removeItem,resetCart } = cartSlice.actions;
+export const { addToCart,removeItem,resetCart, closeCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
