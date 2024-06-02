@@ -10,12 +10,13 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { resetCart, closeCart } from "../../redux/cartReducer";
 import { FormControl } from '@mui/base/FormControl';
+import "./FormShipping.scss"
 
 
 
 const style = {
     position: 'absolute',
-    top: '50%',
+    top: '30%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
@@ -56,11 +57,11 @@ export default function FormShipping({products}) {
             productsComplete,
             {
               headers: {
-                Authorization: `Bearer 3c576ddee01505bbd36c7fec553ad1e22a9ba63a1cccea0038c448f060d196e99386c819ff993e3338325f47b76532803b0ff3d3402f28e1ac6e5cfbb8602eb1bb71208824bf869e9e3279ff16e23dc384aab1e6ae2a462234557793c5985cd9e8658db42f78897d70eebd076999048d1bbceb203a3d6058a565e3573f95e735`,
+                Authorization: `Bearer  5c4d762c67206f6bf47a82d3da37bceb820937b3f0fe7690d8918a0f843ca4d50bb0c266b8d8abf0642034117626c184b993315ac403250017df8f5197f9c151fb5ae08ba1c5aa990b337c94f4ddd77094b44eb40e042f37d532fc1253a1e018450a2ff2bf8e9e95658dd48141aa30499a5f5ad4632e0fbcff059fe64c4458d8`,
               },
             }
           );
-    
+          console.log(response)
           const { id } = response.data;
           return id;
         } catch (error) {
@@ -114,7 +115,7 @@ export default function FormShipping({products}) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box className="form-container">
                     <Typography id="modal-modal-title" variant="h6" component="h1">
                         Complete los datos de envío y cliente
                     </Typography>

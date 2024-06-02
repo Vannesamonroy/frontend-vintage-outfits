@@ -12,7 +12,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link className="link" to="/products/2">
+            <Link className="link" to="/products/7">
               Estilo
             </Link>
           </button>
@@ -37,7 +37,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link to="/products/3" className="link">
+            <Link to="/products/5" className="link">
               Ultima Coleccion
             </Link>
           </button>
@@ -66,7 +66,7 @@ const Categories = () => {
                 alt=""
               />
               <button>
-                <Link to="/products/2" className="link">
+                <Link to="/products/6" className="link">
                   Accesorios
                 </Link>
               </button>
@@ -75,12 +75,12 @@ const Categories = () => {
         </div>
         <div className="row">
           <img
-            src="https://plus.unsplash.com/premium_photo-1673384389924-097135cbf1cd?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1585499583264-491df5142e83?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
           <button>
-            <Link to="/products/3" className="link">
-              Bolsos
+            <Link to="/products/4" className="link">
+              Calcetines
             </Link>
           </button>
         </div>
