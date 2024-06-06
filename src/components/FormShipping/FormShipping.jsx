@@ -57,7 +57,7 @@ export default function FormShipping({products}) {
             productsComplete,
             {
               headers: {
-                Authorization: `Bearer  5c4d762c67206f6bf47a82d3da37bceb820937b3f0fe7690d8918a0f843ca4d50bb0c266b8d8abf0642034117626c184b993315ac403250017df8f5197f9c151fb5ae08ba1c5aa990b337c94f4ddd77094b44eb40e042f37d532fc1253a1e018450a2ff2bf8e9e95658dd48141aa30499a5f5ad4632e0fbcff059fe64c4458d8`,
+                Authorization: `Bearer  ${process.env.REACT_APP_API_TOKEN}`,
               },
             }
           );

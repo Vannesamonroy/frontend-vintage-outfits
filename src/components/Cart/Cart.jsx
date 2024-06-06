@@ -43,7 +43,7 @@ const Cart = () => {
         products,
         {
           headers: {
-            Authorization: `Bearer 3c576ddee01505bbd36c7fec553ad1e22a9ba63a1cccea0038c448f060d196e99386c819ff993e3338325f47b76532803b0ff3d3402f28e1ac6e5cfbb8602eb1bb71208824bf869e9e3279ff16e23dc384aab1e6ae2a462234557793c5985cd9e8658db42f78897d70eebd076999048d1bbceb203a3d6058a565e3573f95e735`,
+            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           },
         }
       );
