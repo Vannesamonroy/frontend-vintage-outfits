@@ -39,7 +39,7 @@ const Cart = () => {
     try {
       console.log(products)
       const response = await axios.post(
-        "http://localhost:1337/api/mercadopago",
+        `${process.env.REACT_APP_API_URL}/mercadopago`,
         products,
         {
           headers: {
